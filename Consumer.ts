@@ -27,7 +27,7 @@ export class Consumer extends BaseUser {
         ctx.reply(greetings(username), Markup.inlineKeyboard(markupKeyboard))
 
         this.bot.action(actions.earn, (ctx: Context) => {
-            ctx.reply(earn())
+            ctx.reply(earn(), Markup.inlineKeyboard(markupKeyboard))
             ctx.answerCbQuery()
         })
     }
